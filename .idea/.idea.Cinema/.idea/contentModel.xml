@@ -10,8 +10,18 @@
       <e p="Controllers" t="Include">
         <e p="HomeController.cs" t="Include" />
       </e>
+      <e p="Data" t="Include">
+        <e p="CinemaContext.cs" t="Include" />
+      </e>
+      <e p="Migrations" t="Include">
+        <e p="20201119082753_Initial.Designer.cs" t="Include" />
+        <e p="20201119082753_Initial.cs" t="Include" />
+        <e p="CinemaContextModelSnapshot.cs" t="Include" />
+      </e>
       <e p="Models" t="Include">
         <e p="ErrorViewModel.cs" t="Include" />
+        <e p="Film.cs" t="Include" />
+        <e p="User.cs" t="Include" />
       </e>
       <e p="Program.cs" t="Include" />
       <e p="Properties" t="Include">
