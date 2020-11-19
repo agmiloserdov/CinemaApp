@@ -13,13 +13,31 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="411e953d-ac1b-431b-8c52-f61006a5f2f2" name="Default Changelist" comment="Добавлены модели: User для дополнительного описания сущности пользователя, в виде Имени и Фамилии.&#10;Film для описания сущности фильма.&#10;Определены и добавлены следующие nuget-пакеты :&#10;Identity, efCore Design, Proxies, Sqlite.Core&#10;Настроена конфигурация используемой БД.&#10;Добавлена начальная миграция" />
+    <list default="true" id="411e953d-ac1b-431b-8c52-f61006a5f2f2" name="Default Changelist" comment="Добавлены модели: User для дополнительного описания сущности пользователя, в виде Имени и Фамилии.&#10;Film для описания сущности фильма.&#10;Определены и добавлены следующие nuget-пакеты :&#10;Identity, efCore Design, Proxies, Sqlite.Core&#10;Настроена конфигурация используемой БД.&#10;Добавлена начальная миграция">
+      <change afterPath="$PROJECT_DIR$/Controllers/Films.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/Films/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinema.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Cinema/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cinema/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Cinema/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cinema/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/HomeController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Home/Index.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Home/Privacy.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Shared/Error.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" afterDir="false" />
+    </list>
+    <list id="b32251c1-d844-4e65-bf1c-9f6cfe4d536a" name="Добавлены модели: User для дополнительного описания сущности пользователя, в виде Имени и Фамилии. Film для описания сущности фильма. Определены и добавлены следующие nuget-пакеты : Identity, efCore Design, Proxies, Sqlite Настроена конфигурация используемой БД. Добавлена начальная миграция" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="a550763d9864d61ef6bf286e288edc5886b68bb3" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -32,7 +50,10 @@
         <option value="$PROJECT_DIR$/Models/Film.cs" />
         <option value="$PROJECT_DIR$/Models/User.cs" />
         <option value="$PROJECT_DIR$/Data/CinemaContext.cs" />
+        <option value="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" />
+        <option value="$PROJECT_DIR$/Controllers/Films.cs" />
         <option value="$PROJECT_DIR$/Startup.cs" />
+        <option value="$PROJECT_DIR$/Views/Films/Index.cshtml" />
       </list>
     </option>
   </component>
@@ -84,11 +105,12 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="411e953d-ac1b-431b-8c52-f61006a5f2f2" name="Default Changelist" comment="" />
+      <changelist id="b32251c1-d844-4e65-bf1c-9f6cfe4d536a" name="Добавлены модели: User для дополнительного описания сущности пользователя, в виде Имени и Фамилии. Film для описания сущности фильма. Определены и добавлены следующие nuget-пакеты : Identity, efCore Design, Proxies, Sqlite Настроена конфигурация используемой БД. Добавлена начальная миграция" comment="" />
       <created>1605771522746</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605771522746</updated>
-      <workItem from="1605771536927" duration="3273000" />
+      <workItem from="1605771536927" duration="5505000" />
     </task>
     <task id="LOCAL-00001" summary="Начало проекта">
       <created>1605772561160</created>
@@ -104,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605774749200</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Добавлены модели: User для дополнительного описания сущности пользователя, в виде Имени и Фамилии.&#10;Film для описания сущности фильма.&#10;Определены и добавлены следующие nuget-пакеты :&#10;Identity, efCore Design, Proxies, Sqlite.Core&#10;Настроена конфигурация используемой БД.&#10;Добавлена начальная миграция">
+      <created>1605775039789</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605775039789</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,14 +155,23 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Начало проекта" />
+    <MESSAGE value="Добавлены модели: User для дополнительного описания сущности пользователя, в виде Имени и Фамилии.&#10;Film для описания сущности фильма.&#10;Определены и добавлены следующие nuget-пакеты :&#10;Identity, efCore Design, Proxies, Sqlite&#10;Настроена конфигурация используемой БД.&#10;Добавлена начальная миграция" />
     <MESSAGE value="Добавлены модели: User для дополнительного описания сущности пользователя, в виде Имени и Фамилии.&#10;Film для описания сущности фильма.&#10;Определены и добавлены следующие nuget-пакеты :&#10;Identity, efCore Design, Proxies, Sqlite.Core&#10;Настроена конфигурация используемой БД.&#10;Добавлена начальная миграция" />
     <option name="LAST_COMMIT_MESSAGE" value="Добавлены модели: User для дополнительного описания сущности пользователя, в виде Имени и Фамилии.&#10;Film для описания сущности фильма.&#10;Определены и добавлены следующие nuget-пакеты :&#10;Identity, efCore Design, Proxies, Sqlite.Core&#10;Настроена конфигурация используемой БД.&#10;Добавлена начальная миграция" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="529" y="406" width="852" height="229" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog" timestamp="1605775025446">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="529" y="406" width="852" height="229" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog/0.0.1920.1044/1920.0.1920.1080@0.0.1920.1044" timestamp="1605775025446" />
     <state x="644" y="228" width="622" height="585" key="RiderGenerateDialog" timestamp="1605774080803">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="644" y="228" width="622" height="585" key="RiderGenerateDialog/0.0.1920.1044/1920.0.1920.1080@0.0.1920.1044" timestamp="1605774080803" />
+    <state x="809" y="438" width="292" height="164" key="VCS.ChangelistChooser" timestamp="1605775030802">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="809" y="438" width="292" height="164" key="VCS.ChangelistChooser/0.0.1920.1044/1920.0.1920.1080@0.0.1920.1044" timestamp="1605775030802" />
     <state x="555" y="258" width="800" height="525" key="Vcs.Push.Dialog.v2" timestamp="1605772198575">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>

@@ -8,7 +8,7 @@
       <e p="Cinema.csproj" t="IncludeRecursive" />
       <e p="Cinema.sln" t="IncludeFlat" />
       <e p="Controllers" t="Include">
-        <e p="HomeController.cs" t="Include" />
+        <e p="Films.cs" t="Include" />
       </e>
       <e p="Data" t="Include">
         <e p="CinemaContext.cs" t="Include" />
@@ -29,12 +29,10 @@
       </e>
       <e p="Startup.cs" t="Include" />
       <e p="Views" t="Include">
-        <e p="Home" t="Include">
+        <e p="Films" t="Include">
           <e p="Index.cshtml" t="Include" />
-          <e p="Privacy.cshtml" t="Include" />
         </e>
         <e p="Shared" t="Include">
-          <e p="Error.cshtml" t="Include" />
           <e p="_Layout.cshtml" t="Include" />
           <e p="_ValidationScriptsPartial.cshtml" t="Include" />
         </e>
@@ -44,6 +42,7 @@
       <e p="appsettings.Development.json" t="Include" />
       <e p="appsettings.json" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
+      <e p="cinema.db" t="Include" />
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
           <e p="netcoreapp3.1" t="Include">

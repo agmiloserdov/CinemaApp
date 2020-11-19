@@ -35,8 +35,6 @@ namespace Cinema
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
-
                 app.UseHsts();
             }
 
@@ -51,7 +49,7 @@ namespace Cinema
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Films}/{action=Index}/{id?}");
             });
         }
     }
