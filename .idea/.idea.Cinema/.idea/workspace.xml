@@ -13,18 +13,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="411e953d-ac1b-431b-8c52-f61006a5f2f2" name="Default Changelist" comment="Добавлены модели: User для дополнительного описания сущности пользователя, в виде Имени и Фамилии.&#10;Film для описания сущности фильма.&#10;Определены и добавлены следующие nuget-пакеты :&#10;Identity, efCore Design, Proxies, Sqlite.Core&#10;Настроена конфигурация используемой БД.&#10;Добавлена начальная миграция">
-      <change afterPath="$PROJECT_DIR$/Controllers/Films.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Films/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cinema.db" afterDir="false" />
+    <list default="true" id="411e953d-ac1b-431b-8c52-f61006a5f2f2" name="Default Changelist" comment="&#10;Добавлен файл БД(cinema.db)&#10;Удалены лишние файлы не относящиеся к проекту (HomeController) и его представления&#10;Стартовая страница изменена на Films/Index&#10;Добавлено представление для главной страницы Films/Index&#10;В контроллере Films добавлен Экшен Index">
+      <change afterPath="$PROJECT_DIR$/Controllers/FilmsController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/FilmViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/UploadFileService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/Films/Add.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cinema/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cinema/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cinema/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cinema/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/HomeController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/Films.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/CinemaContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/CinemaContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Film.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Film.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Home/Index.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Home/Privacy.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Shared/Error.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" afterDir="false" />
     </list>
     <list id="b32251c1-d844-4e65-bf1c-9f6cfe4d536a" name="Добавлены модели: User для дополнительного описания сущности пользователя, в виде Имени и Фамилии. Film для описания сущности фильма. Определены и добавлены следующие nuget-пакеты : Identity, efCore Design, Proxies, Sqlite Настроена конфигурация используемой БД. Добавлена начальная миграция" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,13 +46,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Models/Film.cs" />
         <option value="$PROJECT_DIR$/Models/User.cs" />
-        <option value="$PROJECT_DIR$/Data/CinemaContext.cs" />
         <option value="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" />
-        <option value="$PROJECT_DIR$/Controllers/Films.cs" />
-        <option value="$PROJECT_DIR$/Startup.cs" />
         <option value="$PROJECT_DIR$/Views/Films/Index.cshtml" />
+        <option value="$PROJECT_DIR$/Services/UploadFileService.cs" />
+        <option value="$PROJECT_DIR$/Data/CinemaContext.cs" />
+        <option value="$PROJECT_DIR$/Startup.cs" />
+        <option value="$PROJECT_DIR$/Controllers/Films.cs" />
+        <option value="$PROJECT_DIR$/Models/FilmViewModel.cs" />
+        <option value="$PROJECT_DIR$/Views/Films/Add.cshtml" />
+        <option value="$PROJECT_DIR$/Controllers/FilmsController.cs" />
+        <option value="$PROJECT_DIR$/Models/Film.cs" />
       </list>
     </option>
   </component>
@@ -110,7 +113,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605771522746</updated>
-      <workItem from="1605771536927" duration="5505000" />
+      <workItem from="1605771536927" duration="10080000" />
     </task>
     <task id="LOCAL-00001" summary="Начало проекта">
       <created>1605772561160</created>
@@ -133,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605775039789</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="&#10;Добавлен файл БД(cinema.db)&#10;Удалены лишние файлы не относящиеся к проекту (HomeController) и его представления&#10;Стартовая страница изменена на Films/Index&#10;Добавлено представление для главной страницы Films/Index&#10;В контроллере Films добавлен Экшен Index">
+      <created>1605778110766</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1605778110766</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,13 +167,30 @@
     <MESSAGE value="Начало проекта" />
     <MESSAGE value="Добавлены модели: User для дополнительного описания сущности пользователя, в виде Имени и Фамилии.&#10;Film для описания сущности фильма.&#10;Определены и добавлены следующие nuget-пакеты :&#10;Identity, efCore Design, Proxies, Sqlite&#10;Настроена конфигурация используемой БД.&#10;Добавлена начальная миграция" />
     <MESSAGE value="Добавлены модели: User для дополнительного описания сущности пользователя, в виде Имени и Фамилии.&#10;Film для описания сущности фильма.&#10;Определены и добавлены следующие nuget-пакеты :&#10;Identity, efCore Design, Proxies, Sqlite.Core&#10;Настроена конфигурация используемой БД.&#10;Добавлена начальная миграция" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлены модели: User для дополнительного описания сущности пользователя, в виде Имени и Фамилии.&#10;Film для описания сущности фильма.&#10;Определены и добавлены следующие nuget-пакеты :&#10;Identity, efCore Design, Proxies, Sqlite.Core&#10;Настроена конфигурация используемой БД.&#10;Добавлена начальная миграция" />
+    <MESSAGE value="&#10;Добавлен файл БД(cinema.db)&#10;Удалены лишние файлы не относящиеся к проекту (HomeController) и его представления&#10;Стартовая страница изменена на Films/Index&#10;Добавлено представление для главной страницы Films/Index&#10;В контроллере Films добавлен Экшен Index" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;Добавлен файл БД(cinema.db)&#10;Удалены лишние файлы не относящиеся к проекту (HomeController) и его представления&#10;Стартовая страница изменена на Films/Index&#10;Добавлено представление для главной страницы Films/Index&#10;В контроллере Films добавлен Экшен Index" />
   </component>
   <component name="WindowStateProjectService">
     <state x="529" y="406" width="852" height="229" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog" timestamp="1605775025446">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="529" y="406" width="852" height="229" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog/0.0.1920.1044/1920.0.1920.1080@0.0.1920.1044" timestamp="1605775025446" />
+    <state width="1878" height="277" key="GridCell.Tab.0.bottom" timestamp="1605785567204">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1878" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1044/1920.0.1920.1080@0.0.1920.1044" timestamp="1605785567204" />
+    <state width="1878" height="277" key="GridCell.Tab.0.center" timestamp="1605785567204">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1878" height="277" key="GridCell.Tab.0.center/0.0.1920.1044/1920.0.1920.1080@0.0.1920.1044" timestamp="1605785567204" />
+    <state width="1878" height="277" key="GridCell.Tab.0.left" timestamp="1605785567204">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1878" height="277" key="GridCell.Tab.0.left/0.0.1920.1044/1920.0.1920.1080@0.0.1920.1044" timestamp="1605785567204" />
+    <state width="1878" height="277" key="GridCell.Tab.0.right" timestamp="1605785567204">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1878" height="277" key="GridCell.Tab.0.right/0.0.1920.1044/1920.0.1920.1080@0.0.1920.1044" timestamp="1605785567204" />
     <state x="644" y="228" width="622" height="585" key="RiderGenerateDialog" timestamp="1605774080803">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>

@@ -1,0 +1,39 @@
+@model FilmViewModel
+
+@{
+    ViewBag.Title = "Добавление фильма";
+    Layout = "_Layout";
+}
+
+<div class="row">
+     <div class="col align-self-center">
+         <div class="form">
+             <form asp-action="Add" asp-controller="Films" method="post" enctype="multipart/form-data">
+                 <div asp-validation-summary="ModelOnly"></div>
+                 <div class="form-group">
+                     <label asp-for="Name">Название фильма</label><br/>
+                     <input class="form-control" asp-for="Name"/>
+                     <span asp-validation-for="Description"></span>
+                 </div>
+                 <div class="form-group">
+                     <label asp-for="Description">Описание фильма</label><br/>
+                     <input class="form-control" asp-for="Description"/>
+                     <span asp-validation-for="Description"></span>
+                 </div>
+                 <div class="form-group">
+                     <label  asp-for="File"></label><br />
+                     <input class="form-control-file" asp-for="File"/>
+                     <span asp-validation-for="File"></span>
+                 </div>
+                 <div class="form-group">
+                     <label  asp-for="PublishYear"></label><br />
+                     <input class="form-control-file" asp-for="PublishYear"/>
+                     <span asp-validation-for="File"></span>
+                 </div>
+                 <div>
+                     <button class="form-control" type="submit" id="submit" >Добавить</button>
+                 </div>
+             </form>
+         </div>
+     </div>
+</div>

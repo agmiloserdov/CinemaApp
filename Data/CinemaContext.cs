@@ -9,7 +9,9 @@ namespace Cinema.Data
         public DbSet<Film> Films { get; set; }
         
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlite("Data Source=cinema.db");
+            => options
+                .UseLazyLoadingProxies()
+                .UseSqlite("Data Source=cinema.db");
         
         public CinemaContext(DbContextOptions options) : base(options)
         {

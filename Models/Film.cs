@@ -10,10 +10,10 @@ namespace Cinema.Models
         public string Poster { get; set; }
         public int PublishYear { get; set; }
         public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; } = DateTime.Now;
 
         public string UserId { get; set; }
-        public User User { get; set; }
+        public virtual User User { get; set; }
         
     }
 }
