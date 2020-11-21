@@ -74,6 +74,8 @@
         <e p="favicon.ico" t="Include" />
         <e p="images" t="Include">
           <e p="Posters" t="Include">
+            <e p="The Lord Of The Rings_The_Lord_of_the_Rings._The_Fellowship_of_the_Ring_—_movie.jpg" t="Include" />
+            <e p="Иван Васильевич меняет профессию_Иван_Васильевич_меняет_профессию_(постер).jpg" t="Include" />
             <e p="Три мушкетера_Три_мушкетёра_(2013).jpg" t="Include" />
           </e>
         </e>

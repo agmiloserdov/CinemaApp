@@ -80,3 +80,10 @@ img{
   width: 32%;
   margin-bottom: 15px;
 }
+.pagination-container .pagination li{
+  padding: 5px 12px;
+  border: 1px solid silver;
+  border-radius: 5px;
+  margin: 0 3px;
+  display: block;
+}

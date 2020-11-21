@@ -9,6 +9,7 @@ using Cinema.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
+using X.PagedList;
 
 namespace Cinema.Controllers
 {
@@ -31,10 +32,15 @@ namespace Cinema.Controllers
             _userManager = userManager;
         }
         
-        public IActionResult Index()
+        public IActionResult Index(int? page)
         {
-            List<Film> films = _db.Films.OrderBy(f => f.UpdatedAt).ToList();
-            return View(films);
+            List<Film> films = _db.Films.OrderByDescending(f => f.UpdatedAt).ToList();
+
+            var pageNumber = page ?? 1; 
+            var onePageOfFilms = films.ToPagedList(pageNumber, 21); 
+		
+            ViewBag.FilmPage = onePageOfFilms;
+            return View();
         }
 
         public IActionResult About(int id)
