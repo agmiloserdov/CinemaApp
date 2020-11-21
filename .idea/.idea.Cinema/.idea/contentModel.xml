@@ -8,6 +8,7 @@
       <e p="Cinema.csproj" t="IncludeRecursive" />
       <e p="Cinema.sln" t="IncludeFlat" />
       <e p="Controllers" t="Include">
+        <e p="AccountController.cs" t="Include" />
         <e p="FilmsController.cs" t="Include" />
       </e>
       <e p="Data" t="Include">
@@ -16,12 +17,15 @@
       <e p="Migrations" t="Include">
         <e p="20201119082753_Initial.Designer.cs" t="Include" />
         <e p="20201119082753_Initial.cs" t="Include" />
+        <e p="20201121110726_AddProducerFieldToFilm.Designer.cs" t="Include" />
+        <e p="20201121110726_AddProducerFieldToFilm.cs" t="Include" />
         <e p="CinemaContextModelSnapshot.cs" t="Include" />
       </e>
       <e p="Models" t="Include">
-        <e p="ErrorViewModel.cs" t="Include" />
         <e p="Film.cs" t="Include" />
         <e p="FilmViewModel.cs" t="Include" />
+        <e p="LoginViewModel.cs" t="Include" />
+        <e p="RegisterViewModel.cs" t="Include" />
         <e p="User.cs" t="Include" />
       </e>
       <e p="Program.cs" t="Include" />
@@ -33,7 +37,13 @@
       </e>
       <e p="Startup.cs" t="Include" />
       <e p="Views" t="Include">
+        <e p="Account" t="Include">
+          <e p="Index.cshtml" t="Include" />
+          <e p="Login.cshtml" t="Include" />
+          <e p="Register.cshtml" t="Include" />
+        </e>
         <e p="Films" t="Include">
+          <e p="About.cshtml" t="Include" />
           <e p="Add.cshtml" t="Include" />
           <e p="Index.cshtml" t="Include" />
         </e>
@@ -64,7 +74,7 @@
         <e p="favicon.ico" t="Include" />
         <e p="images" t="Include">
           <e p="Posters" t="Include">
-            <e p="bell-1096280_960_720.png" t="Include" />
+            <e p="Три мушкетера_Три_мушкетёра_(2013).jpg" t="Include" />
           </e>
         </e>
         <e p="js" t="Include">

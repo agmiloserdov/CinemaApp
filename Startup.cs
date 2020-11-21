@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Cinema.Data;
+using Cinema.Models;
 using Cinema.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -28,6 +30,17 @@ namespace Cinema
             services.AddDbContext<CinemaContext>();
             services.ConfigureApplicationCookie(options => options.LoginPath = "/Account/Login");
             services.AddTransient<UploadFileService>();
+            services.AddIdentity<User, IdentityRole>(
+                    options =>
+                    {
+                        options.Password.RequireDigit = false; 
+                        options.Password.RequiredLength = 5; 
+                        options.Password.RequireLowercase = false;
+                        options.Password.RequireUppercase = false; 
+                        options.Password.RequiredUniqueChars = 1; 
+                        options.Password.RequireNonAlphanumeric = false; 
+                    })
+                .AddEntityFrameworkStores<CinemaContext>();;
         }
         
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -46,7 +59,9 @@ namespace Cinema
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
+            app.UseCookiePolicy();
 
             app.UseEndpoints(endpoints =>
             {

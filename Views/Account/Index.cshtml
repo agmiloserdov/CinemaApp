@@ -1,0 +1,33 @@
+@model User
+
+@{
+    ViewBag.Title = "Профиль пользователя";
+    Layout = "_Layout";
+}
+
+<h1>Кабинет пользователя</h1>
+<div class="row">
+    <div class="col-md-6">
+        <p>Имя пользователя - @Model.FirstName</p>
+        <p>Фамилия пользователя - @Model.SecondName</p>
+        <p>Фильмов загружено - @Model.Films.Count</p>
+    </div>
+</div>
+<h2>Список загруженных фильмов</h2>
+ <div class="d-flex align-items-stretch flex-wrap justify-content-between">
+    @foreach (var film in @Model.Films)
+    {
+        <div class="film-card">
+            <a asp-action="About" asp-controller="Films" asp-route-id="@film.Id">
+                <div class="film-poster">
+                    <img src="~/@film.Poster" alt="@film.Name">
+                </div>
+                <p class="film-name">
+                    Название - @film.Name
+                </p>
+            </a>
+            <p>Год выпуска - @film.PublishYear</p>
+                
+        </div>
+    }
+</div>

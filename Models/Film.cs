@@ -7,6 +7,9 @@ namespace Cinema.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+
+        public string Producer { get; set; }
+
         public string Poster { get; set; }
         public int PublishYear { get; set; }
         public DateTime CreatedAt { get; set; }

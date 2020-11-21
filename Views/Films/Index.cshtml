@@ -5,13 +5,31 @@
     Layout = "_Layout";
 }
 
-<h2>Все фильмы</h2>
-
 @if (@Model.Count == 0)
 {
     <h3>Список фильмов Пуст</h3>
 }
 else
 {
-    <p>Здесь будет список фильмов</p>
+    <h2>Список загруженных фильмов</h2>
+    <div class="d-flex align-items-stretch flex-wrap justify-content-between">
+        
+        @foreach (var film in @Model)
+        {
+            <div class="film-card">
+                    <a asp-action="About" asp-route-id="@film.Id">
+                        <div class="film-poster">
+                            <img src="@film.Poster" alt="@film.Name">
+                        </div>
+                        <p class="film-name">
+                            Название - @film.Name
+                        </p>
+                    </a>
+                    <p>Год выпуска - @film.PublishYear</p>
+                    <a asp-action="Index" asp-controller="Account" asp-route-id="@film.UserId">
+                        Добавлен @film.User.Email
+                    </a>
+                </div>
+        }
+    </div>
 }
